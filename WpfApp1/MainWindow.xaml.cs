@@ -27,7 +27,7 @@ namespace WpfApp1
         {
             InitializeComponent();
             var client = new WebClient();
-            var response = client.DownloadString("http://127.0.0.1:52170/api/hotels");
+            var response = client.DownloadString("http://localhost:52170/api/hotels");
             CurrentHotels = JsonConvert.DeserializeObject<List<Hotel>>(response);
             DataContext = this;
         }
